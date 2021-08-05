@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body {
+    font-family: 'Rubik', sans-serif;
+}
+   .contenedor {
+       max-width: 1300px;
+       width: 96%;
+       background: #676;
+       margin: 10px auto;
+       outline: 5px solid #010;
+   } 
+       header { 
+          display: block;
+          width: 100%;
+          background: #232;
+          margin: 0 auto;
+          text-align: center;
+          margin-bottom: 20px;
+      }
+
+         header h1 {
+            font-size: 40px;
+            font-weight: normal;
+            color: #fca;
+            margin-left: 20px;
+            padding: 10px;
+         }
+         #menu-bar {
+            display: none;
+         }
+         .icon-menu {
+            display: none;
+            font-size: 30px;
+            color: #fca;
+            margin-right: 20px;
+            padding: 10px;
+         }
+            .menu ul {
+               display: flex;
+               justify-content: space-evenly;
+               padding: 20px;
+               list-style: none;
+            }
+               .menu ul li a {
+                   font-size: 24px;
+                   color: #fca;
+                   padding: 20px;
+                   text-decoration: none;
+               }
+               .menu ul li a:hover {
+                   background: rgba(0,0,0,.3);
+               }
+      .lap {
+          background: url(../img/lap.jpg) fixed;
+          background-repeat: no-repeat;
+          background-position: center bottom;
+          background-size: cover;
+          height: 450px;
+          position: relative;
+          margin-bottom: 20px;
+      }
+         .contenido-lap {
+             position: absolute;
+             background: rgba(0,0,0,.6);
+             width: 100%;
+             height: 100%;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+         }
+         .contenido-lap h2 {
+            color: #fca;
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 20px;
+         }
+         .contenido-lap p {
+            color: #fca;
+         }
+         .btn {
+            background: transparent;
+            color: #fca;
+            text-decoration: none;
+            padding: 10px 30px;
+            margin-top: 30px;
+            font-size: 20px;
+            border-radius: 4px;
+            width: auto;
+            text-align: center;
+            border: 5px solid #fca;
+        }
+        .btn:hover {
+            background: rgba(0,0,0,.6);
+            cursor: pointer;
+        }
+      main {
+         background: #343;
+         margin-bottom: 20px;
+      } 
+         main h2 {
+            color: #fca;
+            font-size: 30px;
+            font-weight: normal;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .servicios {
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
+           column-gap: 20px;
+        }
+           .servicio {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+           }
+              .servicio h3 {
+                 font-size: 24px;
+                 font-weight: normal;
+                 color: #fca; 
+                 padding: 20px;
+              }
+              .servicio .iconos {
+                 width: 150px;
+                 height: 150px;
+                 background: #121;
+                 border-radius: 20px;
+                 display: flex;
+                 justify-content: space-evenly;
+                 align-items: center;
+                 padding-top: 20px;
+                 border: 10px solid #fca;
+              }
+              
+              .servicio p {
+                 line-height: 2;
+                 color: #fca;
+                 padding: 20px;
+                 text-align: center;
+              }
+         .formulario {
+            background: #454;
+            width: min(600px, 100%);
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+         }
+            .formulario fieldset {
+               border: none;
+            }
+               .formulario legend {
+                  font-size: 18px;
+                  text-transform: uppercase;
+                  color: #fca;
+                  margin-bottom: 20px;
+                  text-align: center;
+               }
+               .campos {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  grid-template-rows: auto auto 200px;
+                  column-gap: 12px;
+               }
+                  .campo {
+                     margin-bottom: 10px;
+                  }
+                     label {
+                        display: block;
+                        color: #fca;
+                        margin-bottom: 5px;
+                     }
+                     .input-text {
+                        width: 100%;
+                        border: none;
+                        padding: 15px;
+                        border-radius: 4px;
+                     }
+                   .campo:nth-child(3),
+                   .campo:nth-child(4) {
+                      grid-column: 1 / 3;
+                   }
+                   .campo .mensaje {
+                      height: 200px;
+                   }
+                   .alinear {
+                      display: flex;
+                      justify-content: flex-end;
+                   }
+                   .alinear .btn {
+                      width: auto;
+                   }
+      .footer {
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+         background: #232;
+         color: #fca;
+         padding: 25px;
+         text-align: center;
+      }
+         .footer img {
+            width: 20px;
+         }
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+    .icon-menu {
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        font-size: 36px;
+    }
+    .menu {
+        position: absolute;
+        z-index: 1;
+        background: #232;
+        width: 96%;
+        transition: all .3s;
+        transform: scale(0);
+        transform-origin: 0 0;
+    }
+       .menu ul {
+           flex-direction: column;
+       }
+          .menu li {
+              padding: 20px;
+              border-top: 1px solid #fca;
+          }
+          .servicios {
+              display: flex;
+              flex-direction: column;
+          }
+       #menu-bar:checked ~ .menu {
+          transform: scale(1);
+       }
+} 
+
+
